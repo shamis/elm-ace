@@ -136,6 +136,14 @@ var implementation = {
 // to tree later. Information about parent isn't available here.
 //
 function render(model) {
+    if (ace) {
+        render_ace(model);
+    } else {
+        setTimeout(function() {render(model)}, 1000);
+    }
+
+}
+function render(model) {
     var shared = {
         // Shared reference to an editor instance
         editor: null,
