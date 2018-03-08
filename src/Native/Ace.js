@@ -136,10 +136,11 @@ var implementation = {
 // to tree later. Information about parent isn't available here.
 //
 function render(model) {
-    if (ace != undefined) {
+    if (typeof ace !== 'undefined') {
         render_ace(model);
     } else {
-        setTimeout(function() {render(model)}, 1000);
+        console.log("waiting for ace");
+        setTimeout(function() {render(model)}, 100);
     }
 
 }
