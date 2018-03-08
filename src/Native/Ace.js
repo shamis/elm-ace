@@ -136,7 +136,7 @@ var implementation = {
 // to tree later. Information about parent isn't available here.
 //
 function render(model) {
-    if (typeof ace !== 'undefined' && !ace) {
+    if (typeof ace !== 'undefined' || ace !== undefined) {
         render_ace(model);
     } else {
         console.log("waiting for ace");
