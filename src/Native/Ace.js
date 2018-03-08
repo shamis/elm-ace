@@ -136,7 +136,7 @@ var implementation = {
 // to tree later. Information about parent isn't available here.
 //
 function render(model) {
-    if (ace) {
+    if (ace || ace.message == "ace is not defined") {
         render_ace(model);
     } else {
         setTimeout(function() {render(model)}, 1000);
