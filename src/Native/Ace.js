@@ -143,7 +143,7 @@ function render(model) {
     }
 
 }
-function render(model) {
+function render_ace(model) {
     var shared = {
         // Shared reference to an editor instance
         editor: null,
